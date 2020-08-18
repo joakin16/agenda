@@ -1,17 +1,32 @@
 package agenda;
 
-public class Principal {
-	public static void main (String[] args) {
-
-		Agenda a1 = new Agenda();
-		
-		a1.adicionarContato();
-		System.out.println(a1.toString());
-		
-		Contatos c1 = new Contatos("Ana", 99887744);
-		Contatos c2 = new Contatos("Jamal", 99663322);
-		System.out.println(c1.toString());
-		System.out.println(c2.toString());
-		
+public class Contatos{
+	
+	private String nome;
+	private int numero;
+	
+	public Contatos(String nome, int numero) {
+		super();
+		this.nome = nome;
+		this.numero = numero;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
+	@Override
+	public String toString() {
+		return "Contatos [nome=" + nome + ", numero=" + numero + "]";
+	}
+
 }
