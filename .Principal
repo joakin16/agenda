@@ -1,32 +1,28 @@
 package agenda;
 
-public class Contatos{
+public class Agenda {
+
+	public int nContatos;
 	
-	private String nome;
-	private int numero;
-	
-	public Contatos(String nome, int numero) {
-		super();
-		this.nome = nome;
-		this.numero = numero;
+	public void adicionarContato() {
+		nContatos ++;
 	}
 	
-	public String getNome() {
-		return nome;
+	public void removerContato() {
+		nContatos --;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public int getnContatos() {
+		return nContatos;
 	}
-	public int getNumero() {
-		return numero;
+
+	public void setnContatos(int nContatos) {
+		this.nContatos = nContatos;
 	}
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-	
+
 	@Override
 	public String toString() {
-		return "Contatos [nome=" + nome + ", numero=" + numero + "]";
+		return "Agenda [nContatos=" + nContatos + "]";
 	}
 
 }
